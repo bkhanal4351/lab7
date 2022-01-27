@@ -1,20 +1,40 @@
 function propmtUserForInput(whichPrompt) {
-    if (!whichprompt) {
+    if (!whichPrompt) {
         whichPrompt = 'How many pictures of Nepal would you like to see?';
     }
     let picCount = prompt (whichPrompt);
-    if (picCount == ''){
+    if (picCount >2 ){
         let message = 'How many pictures of Nepal would you like to see?';
-        let error = 'Please enter a number between 1 and 3';
+        let error = 'Please enter either 1 or 2';
         propmtUserForInput(message + error);
     }
 
-    if (picCount == 3) {
+    if (picCount == '' ){
+        let message = 'How many pictures of Nepal would you like to see?';
+        let error = 'Please enter either 1 or 2';
+        propmtUserForInput(message + error);
+    }
+
+    if (picCount == 1) {
         let counter = 0;
-        while (counter < 3){
-            document.write ('<img src= " images/Nepal.jpg ">');
+        while (counter < 1){
+            document.write ('<img src= "images/Nepal.jpg ">');
             counter++;
         }
     }
+
+        if (picCount == 2) {
+            let counter = 0;
+            while (counter < 2){
+                document.write ('<img src= "images/Nepal.jpg ">');
+                counter++;
+            }
+        }
+    
+    
 }
+
+ 
+
+
 propmtUserForInput();
