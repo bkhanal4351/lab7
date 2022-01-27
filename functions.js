@@ -1,25 +1,20 @@
-function propmtUserForInput() {
-    let person = prompt("What is your Name?");
-alert("Hello" + ' ' + person + ' ' + "Welcome to Bishal's Page, Please click OK");
-
-let hob = prompt("What is Bishal's Hobby").toLocaleLowerCase();
-
-
-    if(hob == 'travel')
-{
-   alert("You Are Correct!")
-}
-     else if(hob=='music')
-    {
-        alert("You are correct!")
+function propmtUserForInput(whichPrompt) {
+    if (!whichprompt) {
+        whichPrompt = 'How many pictures of Nepal would you like to see?';
     }
-    else {
-        alert("sorry try again")
-        propmtUserForInput();
+    let picCount = prompt (whichPrompt);
+    if (picCount == ''){
+        let message = 'How many pictures of Nepal would you like to see?';
+        let error = 'Please enter a number between 1 and 3';
+        propmtUserForInput(message + error);
     }
 
-    return 0;
+    if (picCount == 3) {
+        let counter = 0;
+        while (counter < 3){
+            document.write ('<img src= " images/Nepal.jpg ">');
+            counter++;
+        }
+    }
 }
 propmtUserForInput();
-
-document.write ('<h3>' + "Hello" + ' ' + person + ' ' + "Welcome to Bishal's Page");
