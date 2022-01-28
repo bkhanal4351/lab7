@@ -34,7 +34,4 @@ function propmtUserForInput(whichPrompt) {
     
 }
 
- 
-
-
-propmtUserForInput();
+ propmtUserForInput();
